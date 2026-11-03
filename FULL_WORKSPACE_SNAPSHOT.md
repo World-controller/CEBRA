@@ -4,13 +4,13 @@ The private `World-controller/CEBRA` repository contains the source-code snapsho
 
 ## Restore
 
-Download every `CEBRA-full-workspace-2026-11-03.tar.zst.part-*` asset and `SHA256SUMS.txt` from the release. In an empty directory on macOS or Linux:
+Download every `CEBRA-full-workspace-20261103.tar.zst.part-*` asset and `SHA256SUMS.txt` from the release. In an empty directory on macOS or Linux:
 
 ```bash
 shasum -a 256 -c SHA256SUMS.txt
-cat CEBRA-full-workspace-2026-11-03.tar.zst.part-* > CEBRA-full-workspace-2026-11-03.tar.zst
-zstd -t CEBRA-full-workspace-2026-11-03.tar.zst
-zstd -d -c CEBRA-full-workspace-2026-11-03.tar.zst | tar -xf -
+cat CEBRA-full-workspace-20261103.tar.zst.part-* > CEBRA-full-workspace-20261103.tar.zst
+zstd -t CEBRA-full-workspace-20261103.tar.zst
+zstd -d -c CEBRA-full-workspace-20261103.tar.zst | tar -xf -
 ```
 
 The archive uses paths relative to the project root. Concatenate the numbered volumes in lexical order to reconstruct it. Check each part against `SHA256SUMS.txt` before concatenation.
