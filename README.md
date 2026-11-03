@@ -1,3 +1,5 @@
+> Built with Meta Llama 3.
+
 # EfficientRAG-official
 
 <div align=center>
