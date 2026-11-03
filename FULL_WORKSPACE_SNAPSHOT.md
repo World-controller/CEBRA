@@ -1,8 +1,8 @@
 # Full workspace snapshot
 
-The private `World-controller/CEBRA` repository contains the source-code snapshot on `main`. The rest of the project working tree, including paper and patent materials, research data, experiment outputs, model files, and local project notes, is attached to the private GitHub Release `full-workspace-2026-11-03` as a split Zstandard-compressed TAR archive.
+The private `World-controller/CEBRA` repository contains the source-code snapshot on `main`. A broader snapshot of the current project workspace is attached to the private GitHub Release `full-workspace-2026-11-03` as split Zstandard-compressed TAR volumes. It includes the project code, paper/patent materials, datasets and experiment outputs, model-cache files, figures, and local research notes.
 
-## Restore the complete working-tree snapshot
+## Restore
 
 Download every `CEBRA-full-workspace-2026-11-03.tar.zst.part-*` asset and `SHA256SUMS.txt` from the release. In an empty directory on macOS or Linux:
 
@@ -13,12 +13,8 @@ zstd -t CEBRA-full-workspace-2026-11-03.tar.zst
 zstd -d -c CEBRA-full-workspace-2026-11-03.tar.zst | tar -xf -
 ```
 
-The release archive has paths relative to the project root, so extraction into an empty directory reconstructs the workspace tree. The checksum file lists each downloaded volume; concatenating them in lexical order produces the archive.
+The archive uses paths relative to the project root. Concatenate the numbered volumes in lexical order to reconstruct it. Check each part against `SHA256SUMS.txt` before concatenation.
 
-## Snapshot scope
+## Exclusions
 
-The snapshot includes the current working-tree files and untracked project materials. This includes `src/`, `data/`, `dq-paper/`, `paper/`, `patent/`, `refine-logs/`, `model_cache/`, `figures/`, `results/`, and project notes/configuration. It preserves symbolic links as links and includes model/dataset license files present in the workspace.
-
-Excluded: Git internals/history (`.git`), virtual environments (`.venv*`, `venv`, `env`), Python/build caches, `node_modules`, browser-session state, `.DS_Store`, local app settings, and credential files (`.env*`, private-key files). The archive does not replace independent backups of the original workspace.
-
-Archive and volume checksums are listed in the release assets. Snapshot layout/count/size were inventoried before packaging; the release asset hashes provide end-to-end transfer verification.
+Git internals/history (`.git`), virtual environments, Python/build/package caches, `node_modules`, local assistant/app configuration and sessions, external symlinks, `.DS_Store`, environment/credential files, and private-key files are not included. The snapshot contains model files with the corresponding licenses and policy files present in the workspace. It is a point-in-time backup and does not replace an independent backup of the original workspace.
