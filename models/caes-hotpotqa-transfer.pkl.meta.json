@@ -1,0 +1,27 @@
+{
+  "model_sha256": "c06ccecad3f3b74cb7171ae2733edf4bdac4af3813f4897145218bc45ca34d1d",
+  "feature_names": [
+    "label_score",
+    "question_overlap",
+    "bridge_overlap",
+    "novelty",
+    "redundancy",
+    "rank_prior",
+    "iter_prior",
+    "has_next_info",
+    "title_question_overlap"
+  ],
+  "scikit_learn": "1.9.0",
+  "nlp_profile": {
+    "spacy": "3.7.5",
+    "model": "en_core_web_sm",
+    "model_version": "3.7.0"
+  },
+  "training_samples": 4811,
+  "training_examples": 179460,
+  "C": 1,
+  "training_source": "HotpotQA validation-derived frozen trajectories (not official train split)",
+  "source_trajectory_sha256": "24241a6581251ce23a6cd2b60141edd41621b94b54698fd9b041923953a06157",
+  "new_fit_calls": 0,
+  "synthetic_smoke_example": false
+}

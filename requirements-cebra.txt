@@ -1,0 +1,9 @@
+# Python 3.11 CPU-only release profile. No PyTorch, CUDA, or paid API required.
+numpy==1.26.4
+scipy==1.17.1
+scikit-learn==1.9.0
+spacy==3.7.5
+# Pin the CLI stack used by spaCy 3.7 (newer Typer releases changed packaging).
+weasel==0.4.1
+typer==0.12.5
+click==8.1.8

@@ -1,0 +1,11 @@
+{
+  "dataset": "synthetic-smoke",
+  "split": "calibration",
+  "samples": 3,
+  "sha256": "4217f476a407b7ad53387d3a07526dbe4175935d62e021a350a2e37434f9d2d5",
+  "question_ids": [
+    "synthetic-11",
+    "synthetic-12",
+    "synthetic-13"
+  ]
+}

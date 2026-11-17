@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+<title id="title">CEBRA: state-aware chunk reduction</title><desc id="desc">Calibration selects a budget-aware operating point. At inference, frozen retrieved chunks are scored using retained state, filtered by the fixed point and assembled into a compact reader context.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#52647a"/></marker></defs>
+<rect width="1200" height="430" rx="22" fill="#f7f9fc"/>
+<g font-family="Arial, sans-serif"><text x="36" y="45" font-size="24" font-weight="700" fill="#172a44">CEBRA</text><text x="135" y="45" font-size="18" fill="#52647a">State-aware selection. Compact evidence. Fixed retrieval.</text>
+<rect x="398" y="74" width="470" height="86" rx="12" fill="#fff0d9" stroke="#dfb96a"/>
+<text x="418" y="103" font-size="17" font-weight="700" fill="#68481c">BAOS · calibration only</text><text x="418" y="130" font-size="15" fill="#68481c">Held-out trajectories + budget reference → fixed policy</text>
+<g fill="none" stroke="#52647a" stroke-width="2" marker-end="url(#arrow)"><path d="M250 257 H291"/><path d="M549 257 H590"/><path d="M842 257 H884"/><path d="M719 160 V203" stroke-dasharray="6,5"/></g>
+<rect x="32" y="206" width="218" height="100" rx="12" fill="#e9eff7" stroke="#b6c7df"/>
+<text x="50" y="238" font-size="17" font-weight="700" fill="#233f60">Frozen trajectories</text><text x="50" y="265" font-size="15" fill="#40556e">Multi-round candidates</text><text x="50" y="287" font-size="15" fill="#40556e">Queries + upstream signals</text>
+<rect x="296" y="206" width="253" height="100" rx="12" fill="#e3f3ef" stroke="#81b9a9"/>
+<text x="314" y="238" font-size="17" font-weight="700" fill="#175647">CAES · state-aware scoring</text><text x="314" y="265" font-size="15" fill="#286757">Nine observable features</text><text x="314" y="287" font-size="15" fill="#286757">Marginal evidence contribution</text>
+<rect x="595" y="206" width="247" height="100" rx="12" fill="#fff0d9" stroke="#dfb96a"/>
+<text x="613" y="238" font-size="17" font-weight="700" fill="#68481c">Apply fixed retention policy</text><text x="613" y="265" font-size="15" fill="#795b2d">Calibrated threshold + mode</text><text x="613" y="287" font-size="15" fill="#795b2d">Keep complementary chunks</text>
+<rect x="889" y="206" width="278" height="100" rx="12" fill="#eae8fa" stroke="#aca2d2"/>
+<text x="907" y="238" font-size="17" font-weight="700" fill="#4b4078">Compact reader context</text><text x="907" y="265" font-size="15" fill="#5c5087">Unique retained passages</text><text x="907" y="287" font-size="15" fill="#5c5087">Question → downstream reader</text>
+<path d="M718 306 V350 H422 V311" fill="none" stroke="#397c68" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="443" y="337" width="253" height="27" rx="6" fill="#f7f9fc"/><text x="454" y="356" font-size="14" fill="#286757">State updates after each round</text>
+<text x="36" y="405" font-size="14" fill="#65768b">Inference uses the fixed operating point; it does not recalibrate on test questions or change retrieval.</text></g></svg>

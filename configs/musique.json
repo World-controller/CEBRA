@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "dataset": "musique",
+  "model": "../models/caes-hotpotqa-transfer.pkl",
+  "model_sha256": "c06ccecad3f3b74cb7171ae2733edf4bdac4af3813f4897145218bc45ca34d1d",
+  "operating_point": {
+    "threshold": 0.1,
+    "min_keep_per_iter": 0,
+    "relaxed_empty_gate": false
+  },
+  "budget_reference": 3,
+  "K_ref": 2.185,
+  "calibration_samples": 1000,
+  "test_samples": 252,
+  "max_recall_drop": 0.01,
+  "source": "Frozen retained-context experiment operating point; no recalibration for release."
+}

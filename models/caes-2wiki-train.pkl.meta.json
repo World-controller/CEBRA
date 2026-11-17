@@ -1,0 +1,27 @@
+{
+  "model_sha256": "6d9ca0092b14b380baa2ca8051e4ae5bfb3dc6afdc56b2146781b47e02cc5fb0",
+  "feature_names": [
+    "label_score",
+    "question_overlap",
+    "bridge_overlap",
+    "novelty",
+    "redundancy",
+    "rank_prior",
+    "iter_prior",
+    "has_next_info",
+    "title_question_overlap"
+  ],
+  "scikit_learn": "1.9.0",
+  "nlp_profile": {
+    "spacy": "3.7.5",
+    "model": "en_core_web_sm",
+    "model_version": "3.7.0"
+  },
+  "training_samples": 14576,
+  "training_examples": 487230,
+  "C": 1,
+  "training_source": "2WikiMultiHopQA train",
+  "source_trajectory_sha256": "8d31d9fba21e0d542f3ba73b01d01140cae5e77d987db8b977dcac229a6cf2d2",
+  "new_fit_calls": 0,
+  "synthetic_smoke_example": false
+}

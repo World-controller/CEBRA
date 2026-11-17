@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "dataset": "hotpotqa",
+  "model": "../models/caes-2wiki-train.pkl",
+  "model_sha256": "6d9ca0092b14b380baa2ca8051e4ae5bfb3dc6afdc56b2146781b47e02cc5fb0",
+  "operating_point": {
+    "threshold": 0.7,
+    "min_keep_per_iter": 0,
+    "relaxed_empty_gate": false
+  },
+  "budget_reference": 3,
+  "K_ref": 2.726,
+  "calibration_samples": 1000,
+  "test_samples": 5311,
+  "max_recall_drop": 0.01,
+  "source": "Frozen retained-context experiment operating point; no recalibration for release."
+}
