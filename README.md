@@ -8,9 +8,9 @@ CEBRA constructs compact reader contexts from fixed multi-hop retrieval trajecto
 - **Budget-Aware Operating-point Selection (BAOS):** held-out calibration balances evidence preservation and average context size against a budget-only reference.
 - **Fixed retrieval, adaptive retention:** candidate retrieval and query updates stay unchanged; CEBRA controls which retrieved chunks enter the reader context.
 
-![CEBRA website overview: frozen trajectories, state-aware scoring, calibrated retention and reader context](assets/cebra-overview.svg)
+![CEBRA framework from the manuscript: frozen upstream retrieval, CAES, BAOS, and test-time evidence retention](assets/framework-1.png)
 
-*Website overview, not a reproduction of the manuscript's Figure 1. BAOS selects the operating point on calibration data; inference applies that fixed point.*
+*CEBRA framework from the manuscript. [View the original PDF](assets/framework-1.pdf).*
 
 ## Quick start
 

@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 import re
 import subprocess
-import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
 CORE_HASHES={
@@ -26,7 +25,21 @@ def test_readme_branding_and_assets():
     assert 'synthetic smoke example' in text
     assert 'Built with Meta Llama 3.' in text
     assert not (ROOT/'FULL_WORKSPACE_SNAPSHOT.md').exists()
-    ET.parse(ROOT/'assets/cebra-overview.svg')
+    assert '(assets/framework-1.png)' in text
+    assert '(assets/framework-1.pdf)' in text
+    assert 'cebra-overview.svg' not in text
+    assert not (ROOT/'assets/cebra-overview.svg').exists()
+
+
+def test_manuscript_framework_assets():
+    original=(ROOT/'assets/framework-1.pdf').read_bytes()
+    assert original.startswith(b'%PDF-')
+    # Preserve the manuscript PDF byte-for-byte; the PNG is a display-only render.
+    assert hashlib.sha256(original).hexdigest()=='63be630f0a06c0df7f145570d579e7fb0577cf2ec14b121e5f337a944e0ad5cc'
+    preview=(ROOT/'assets/framework-1.png').read_bytes()
+    assert preview.startswith(b'\x89PNG\r\n\x1a\n')
+    assert int.from_bytes(preview[16:20],'big')>=3000
+    assert int.from_bytes(preview[20:24],'big')>0
 
 
 def test_local_markdown_links_exist():
@@ -39,7 +52,7 @@ def test_local_markdown_links_exist():
 
 def test_required_public_files_not_ignored():
     if not (ROOT/'.git').exists():return
-    names=[str(p.relative_to(ROOT)) for directory in ['configs','models','examples/smoke'] for p in (ROOT/directory).iterdir() if p.is_file()]
+    names=[str(p.relative_to(ROOT)) for directory in ['assets','configs','models','examples/smoke'] for p in (ROOT/directory).iterdir() if p.is_file()]
     result=subprocess.run(['git','check-ignore',*names],cwd=ROOT,capture_output=True,text=True)
     assert result.returncode==1,result.stdout
 
